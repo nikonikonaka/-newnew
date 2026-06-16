@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2_shun.unity
     guid: 48c086010d70cfe498384f10ff57e9f4
   - enabled: 1
-    path: Assets/Scenes/Stage1_shun.unity
+    path: Assets/Scenes/shun_s_t3.unity
     guid: fcd69c382e16b22469b0d27d3e2a39af
   - enabled: 1
     path: Assets/Scenes/Explain.unity
