@@ -3,15 +3,15 @@ using TMPro;
 
 public class RESCON : MonoBehaviour
 {
-    public float rescueDistance = 2f;
     public TextMeshProUGUI rescueText;
 
     GameObject[] people;
+    Collider2D myCol; // ★ 自分の当たり判定
 
     void Start()
     {
-        // RESPERタグの人を取得
         people = GameObject.FindGameObjectsWithTag("RESPER");
+        myCol = GetComponent<Collider2D>(); // ★ 自分のCollider取得
         UpdateUI();
     }
 
@@ -29,14 +29,12 @@ public class RESCON : MonoBehaviour
         {
             if (p == null || !p.activeSelf) continue;
 
-            float dist = Vector3.Distance(
-                transform.position,
-                p.transform.position
-            );
+            Collider2D pCol = p.GetComponent<Collider2D>();
+            if (pCol == null) continue;
 
-            if (dist <= rescueDistance)
+            // ★ 自分のColliderと相手のColliderが重なっているか判定
+            if (myCol.IsTouching(pCol))
             {
-                // 救助 → 非表示
                 p.SetActive(false);
                 UpdateUI();
                 break;
@@ -56,6 +54,7 @@ public class RESCON : MonoBehaviour
 
         rescueText.text = "People: " + remaining;
     }
+
     public int GetRemainingPeople()
     {
         int remaining = 0;

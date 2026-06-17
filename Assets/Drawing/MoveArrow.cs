@@ -84,16 +84,21 @@ public class MoveArrow : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Fire"))
     {
-        if (collision.gameObject.CompareTag("Fire"))
-        {
-            Vector2 dir =
-                (transform.position - collision.transform.position).normalized;
+        // Enterキーを押している間はノックバックしない
+        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.KeypadEnter))
+            return;
 
-            StartCoroutine(DoKnockback(dir));
-        }
+        Vector2 dir =
+            (transform.position - collision.transform.position).normalized;
+
+        StartCoroutine(DoKnockback(dir));
     }
+}
+
 
     IEnumerator DoKnockback(Vector2 dir)
     {
