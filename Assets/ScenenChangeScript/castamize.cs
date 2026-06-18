@@ -1,12 +1,14 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Stage3Change : MonoBehaviour
+public class castamize : MonoBehaviour
 {
+    // インスペクターで設定できるようにする
+    public string loadSceneName;
+
     public void StartGame()
     {
-        SceneManager.LoadScene("shun3");
+        SceneManager.LoadScene(loadSceneName);
     }
 
     public void ExitGame()
@@ -14,5 +16,3 @@ public class Stage3Change : MonoBehaviour
         Application.Quit();
     }
 }
-
-
