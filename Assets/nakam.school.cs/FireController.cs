@@ -3,20 +3,15 @@ using System.Collections;
 
 public class FireController : MonoBehaviour
 {
-<<<<<<< HEAD
-    public float extinguishTime = 2f; // Hoseで消える時間
-    public float shrinkTime = 0.5f;   // 小さくなる時間
-    public float holdExtinguishTime = 6f; // Enter長押しで消える時間
-=======
-    public float extinguishTime = 2f; 
-    public float shrinkTime = 0.5f;
+    public float extinguishTime = 2f;      // Hoseで消える時間
+    public float shrinkTime = 0.5f;        // 小さくなる時間
+    public float holdExtinguishTime = 6f;  // Enter長押しで消える時間
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
->>>>>>> af46d1ebaf370ed0642b28ca2bf482daf248d8ac
 
-    float timer = 0f;          // Hose用タイマー
-    float holdTimer = 0f;      // Enter長押しタイマー
+    float timer = 0f;       // Hose用タイマー
+    float holdTimer = 0f;   // Enter長押しタイマー
 
     bool isExtinguishing = false; // Hoseが当たっている
     bool isInside = false;        // Player2が範囲内
@@ -25,11 +20,11 @@ public class FireController : MonoBehaviour
     Collider2D col;
     Vector3 originalScale;
 
-    // ★ Player2 消火アニメ用
-    public bool isPlayer2Extinguishing = false; // ← P2Handle からON/OFFされる
-    public float player2Timer = 0f;             // ← Player2専用の消火タイマー
-    public float player2ExtinguishTime = 5f;    // ← Player2の消火時間
-    Vector3 basePos;                            // ← 揺れの基準位置
+    // Player2 消火アニメ用
+    public bool isPlayer2Extinguishing = false;
+    public float player2Timer = 0f;
+    public float player2ExtinguishTime = 5f;
+    Vector3 basePos;
 
     private Color normalColor;
     private Color extinguishColor = new Color(0.6f, 0.6f, 1f);
@@ -43,18 +38,44 @@ public class FireController : MonoBehaviour
         normalColor = sr.color;
         originalScale = transform.localScale;
 
-        basePos = transform.position; // ← 揺れの基準位置を保存
+        basePos = transform.position;
     }
 
     void Update()
     {
         if (isFinished) return;
 
-<<<<<<< HEAD
-        float progress = 0f; // 最終的に縮ませる割合
+        float progress = 0f;
 
         // ----------------------------------------------------
-        // ★Hose による消火（2秒）
+        // ★ Player2 揺れ消火（最優先）
+        // ----------------------------------------------------
+        if (isPlayer2Extinguishing)
+        {
+            player2Timer += Time.deltaTime;
+
+            sr.color = extinguishColor;
+
+            float shake = Mathf.Sin(Time.time * 40f) * 0.05f;
+            transform.position = basePos + new Vector3(shake, 0f, 0f);
+
+            if (player2Timer >= player2ExtinguishTime)
+            {
+                ExtinguishImmediately();
+                return;
+            }
+
+            return; // Player2消火中は他の処理を無視
+        }
+        else
+        {
+            transform.position = basePos;
+            sr.color = normalColor;
+            player2Timer = 0f;
+        }
+
+        // ----------------------------------------------------
+        // ★ Hose による消火（StartExtinguish/StopExtinguish 使用）
         // ----------------------------------------------------
         if (isExtinguishing)
         {
@@ -65,60 +86,15 @@ public class FireController : MonoBehaviour
             {
                 FinishFire();
                 return;
-=======
-        // ★ Player2 消火アニメ（Enter押してる間）
-        if (isPlayer2Extinguishing)
-        {
-            player2Timer += Time.deltaTime;
-
-            // 色を青くする
-            sr.color = extinguishColor;
-
-            // ★ 揺れ（位置がズレないように basePos を基準にする）
-            float shake = Mathf.Sin(Time.time * 40f) * 0.05f;
-            transform.position = basePos + new Vector3(shake, 0f, 0f);
-
-            // ★ 一定時間で消火
-            if (player2Timer >= player2ExtinguishTime)
-            {
-                ExtinguishImmediately();
-            }
-
-            return; // ← Player2消火中はホース処理を無視
-        }
-        else
-        {
-            // Player2が離したら元の位置に戻す
-            transform.position = basePos;
-            sr.color = normalColor;
-            player2Timer = 0f;
-        }
-
-        // ★ ホースによる消火（元の処理）
-        if (isExtinguishing)
-        {
-            timer += Time.deltaTime;
-
-            float progress = Mathf.Clamp01(timer / extinguishTime);
-            transform.localScale = originalScale * (1f - progress * 0.3f);
-
-            if (timer >= extinguishTime)
-            {
-                ExtinguishImmediately();
->>>>>>> af46d1ebaf370ed0642b28ca2bf482daf248d8ac
             }
         }
         else
         {
             timer = 0f;
-<<<<<<< HEAD
-=======
-            transform.localScale = originalScale;
->>>>>>> af46d1ebaf370ed0642b28ca2bf482daf248d8ac
         }
 
         // ----------------------------------------------------
-        // ★Player2 + Enter 長押し消火（6秒）
+        // ★ Player2 + Enter 長押し消火（6秒）
         // ----------------------------------------------------
         if (isInside && Input.GetKey(KeyCode.Return))
         {
@@ -137,14 +113,13 @@ public class FireController : MonoBehaviour
         }
 
         // ----------------------------------------------------
-        // ★縮小処理（Hose と Enter の進行度の大きい方を採用）
+        // ★ 縮小処理（Hose と Enter の進行度の大きい方）
         // ----------------------------------------------------
         transform.localScale = originalScale * (1f - progress * 0.3f);
     }
 
-<<<<<<< HEAD
     // ----------------------------------------------------
-    // ★火が完全に消える処理
+    // ★ 火が完全に消える処理
     // ----------------------------------------------------
     void FinishFire()
     {
@@ -153,25 +128,6 @@ public class FireController : MonoBehaviour
         StartCoroutine(ShrinkAndDestroy());
     }
 
-    // Hose が触れた
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Hose"))
-            isExtinguishing = true;
-
-        if (other.CompareTag("Player2"))
-            isInside = true;
-    }
-
-    // Hose が離れた
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Hose"))
-            isExtinguishing = false;
-
-        if (other.CompareTag("Player2"))
-            isInside = false;
-=======
     public void ExtinguishImmediately()
     {
         if (isFinished) return;
@@ -183,7 +139,6 @@ public class FireController : MonoBehaviour
             col.enabled = false;
 
         StartCoroutine(ShrinkAndDestroy());
->>>>>>> af46d1ebaf370ed0642b28ca2bf482daf248d8ac
     }
 
     IEnumerator ShrinkAndDestroy()
@@ -203,22 +158,30 @@ public class FireController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // ----------------------------------------------------
+    // ★ Trigger（StartExtinguish / StopExtinguish を使用）
+    // ----------------------------------------------------
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Hose"))
-        {
             StartExtinguish();
-        }
+
+        if (other.CompareTag("Player2"))
+            isInside = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Hose"))
-        {
             StopExtinguish();
-        }
+
+        if (other.CompareTag("Player2"))
+            isInside = false;
     }
 
+    // ----------------------------------------------------
+    // ★ Start / Stop を残す
+    // ----------------------------------------------------
     public void StartExtinguish()
     {
         isExtinguishing = true;
