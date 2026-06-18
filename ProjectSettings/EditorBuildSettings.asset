@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Title2.unity
     guid: b3a60dea07820e043947f54b1d7dd93c
   - enabled: 1
-    path: Assets/Scenes/Stage2_shun.unity
+    path: Assets/Scenes/DebbugStage2.unity
     guid: 48c086010d70cfe498384f10ff57e9f4
   - enabled: 1
     path: Assets/Scenes/Stage1_shun.unity
@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Explain.unity
     guid: 768b78d059cd39647bdfd49d840d988f
   - enabled: 1
-    path: Assets/Scenes/stage3_shun.unity
+    path: Assets/Scenes/DabbugStage3.unity
     guid: a86ae90a925fec64e8b92e0acf009577
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
