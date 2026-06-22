@@ -4813,11 +4813,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431059018}
   m_CullTransparentMesh: 1
---- !u!1 &1499451496 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4656943641581513742, guid: a1773dd03c432ce40a7bb0ed41a14ccd, type: 3}
-  m_PrefabInstance: {fileID: 3592867190364115197}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513479884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,11 +4969,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1531887390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5456841421459834178, guid: b28bbaf3bc4c1f4408e278c5956749a9, type: 3}
-  m_PrefabInstance: {fileID: 661332831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1637425036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5198,14 +5188,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637425036}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd9134b6e3cd11408e706a4c5e4e544, type: 3}
+  m_Script: {fileID: 11500000, guid: 44c33b838ea7f37469a8487075cfe109, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerLadder
+  m_EditorClassIdentifier: Assembly-CSharp::LadderHandler
   hasLadder: 0
-  ladderPrefab: {fileID: 1499451496}
-  placePoint: {fileID: 1531887390}
+  ladderPrefab: {fileID: 0}
+  holeObject: {fileID: 0}
 --- !u!1 &1715845496
 GameObject:
   m_ObjectHideFlags: 0

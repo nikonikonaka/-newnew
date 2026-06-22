@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 
 public class PlayerLadder : MonoBehaviour
 {
@@ -47,4 +47,4 @@ public class PlayerLadder : MonoBehaviour
             Debug.Log("‚Í‚µ‚²Žæ“¾");
         }
     }
-}*/
+}
