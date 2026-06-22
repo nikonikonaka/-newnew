@@ -9,6 +9,9 @@ TagManager:
   - Hose
   - Player1
   - Player2
+  - 'LadderItem '
+  - Hole
+  - Ladder
   layers:
   - Default
   - TransparentFX

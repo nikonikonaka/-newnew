@@ -1,15 +1,14 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PlayerLadder : MonoBehaviour
 {
-    public bool hasLadder = false;          // はしごを持っているか
-    public GameObject ladderPrefab;         // 設置するはしご
-    public Transform placePoint;            // 設置位置（プレイヤーの前）
+    public bool hasLadder = false;
+    public GameObject ladderPrefab;
+    public Transform placePoint;
 
     void Update()
     {
-        // はしごを持っている時だけ設置できる
-        if (hasLadder && Input.GetKeyDown(KeyCode.E))
+        if (hasLadder && Input.GetKeyDown(KeyCode.LeftShift))
         {
             PlaceLadder();
         }
@@ -17,20 +16,35 @@ public class PlayerLadder : MonoBehaviour
 
     void PlaceLadder()
     {
-        // はしごを設置（ここで壁が出現する）
-        Instantiate(ladderPrefab, placePoint.position, placePoint.rotation);
+        if (ladderPrefab == null || placePoint == null)
+        {
+            Debug.LogError("PrefabかPlacePointが未設定");
+            return;
+        }
 
-        // 設置したので手持ちから消える
+        GameObject ladder = Instantiate(ladderPrefab, placePoint.position, Quaternion.identity);
+
         hasLadder = false;
+
+        // ★ここが重要（通れるようにする）
+        Collider2D col = ladder.GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.isTrigger = true;
+        }
+
+        Debug.Log("はしご設置（通行可能）");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // はしごアイテムを拾う
+        // 梯子アイテム取得だけ
         if (other.CompareTag("LadderItem"))
         {
             hasLadder = true;
             Destroy(other.gameObject);
+
+            Debug.Log("はしご取得");
         }
     }
-}
+}*/

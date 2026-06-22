@@ -16,9 +16,14 @@ public class GoalManager : MonoBehaviour
             // プレイヤー2人ともゴール内
             if (player1In && player2In)
             {
+                StageData.currentStage += 1;  // ← 次のステージへ進む
                 SceneManager.LoadScene("ClearScene");
             }
         }
+    }
+    public static class StageData
+    {
+        public static int currentStage = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
