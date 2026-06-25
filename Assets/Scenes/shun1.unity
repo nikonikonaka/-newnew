@@ -5006,9 +5006,14 @@ MonoBehaviour:
   speed: 2.5
   knockbackForce: 3
   knockbackTime: 0.2
-  upSprite: {fileID: 7041030811253586874, guid: 15fa77ba96fd40644b1363d2f5b494a1, type: 3}
-  downSprite: {fileID: 1869612382351481192, guid: e9a09eee95e0908409b0fa1e2bb9c002, type: 3}
-  sideSprite: {fileID: -6142550849673023848, guid: 30b6dc5052855d044bbc5ca46b6aca2e, type: 3}
+  upSprite: {fileID: -8544906439916621513, guid: 2da18f9c2cfaaa44f9149fbb176cc6a5, type: 3}
+  downSprite: {fileID: -6594073380962191338, guid: 87883c6f7fc42394a897993bc1089c74, type: 3}
+  rightSprite: {fileID: 3724257746112637289, guid: e6b63846966babb47ac5be0d9792ed19, type: 3}
+  leftSprite: {fileID: -336527375909007408, guid: 256029406c3b820418ef42a180e57774, type: 3}
+  upWalkSprite: {fileID: -6594381343313924726, guid: 023f4012d9056db46adefcc1c182151f, type: 3}
+  downWalkSprite: {fileID: 6676870202666233833, guid: 2a4b15cd1e44fc64e94838f8efe38488, type: 3}
+  rightWalkSprite: {fileID: -8736465373177798964, guid: e4fe311a2b749e14cb8f6bb44bb5e779, type: 3}
+  leftWalkSprite: {fileID: 3667667128661100329, guid: b41bc8949edf6b449982d406ac451796, type: 3}
   hoseUp: {fileID: 1890351672}
   hoseDown: {fileID: 1206456439}
   hoseLeft: {fileID: 1202925460}
@@ -5060,7 +5065,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 7041030811253586874, guid: 15fa77ba96fd40644b1363d2f5b494a1, type: 3}
+  m_Sprite: {fileID: -8544906439916621513, guid: 2da18f9c2cfaaa44f9149fbb176cc6a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5081,7 +5086,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.593, y: -3.9658, z: 0}
-  m_LocalScale: {x: 2.1008143, y: 2.139501, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1890351673}
@@ -5129,7 +5134,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.5}
+    oldSize: {x: 11.1, y: 17.99}
     newSize: {x: 0.3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5194,8 +5199,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LadderHandler
   hasLadder: 0
+  pickupLadders: []
   ladderPrefab: {fileID: 0}
-  holeObject: {fileID: 0}
+  holes: []
+  pickupDistance: 2
+  placeDistance: 2.5
 --- !u!1 &1715845496
 GameObject:
   m_ObjectHideFlags: 0
