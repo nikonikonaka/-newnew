@@ -12,6 +12,7 @@ TagManager:
   - 'LadderItem '
   - Hole
   - Ladder
+  - window
   layers:
   - Default
   - TransparentFX
