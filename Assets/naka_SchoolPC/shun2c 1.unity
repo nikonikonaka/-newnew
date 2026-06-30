@@ -5045,8 +5045,9 @@ GameObject:
   - component: {fileID: 1637425043}
   - component: {fileID: 1637425044}
   - component: {fileID: 1637425045}
+  - component: {fileID: 1637425046}
   m_Layer: 0
-  m_Name: "\u30D7\u30EC\u30A4\u30E4\u30FCp_n"
+  m_Name: "\u30D7\u30EC\u30A4\u30E4\u30FC1_0 p"
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5279,6 +5280,20 @@ MonoBehaviour:
   - {fileID: 1106429218}
   pickupDistance: 2
   placeDistance: 6
+--- !u!114 &1637425046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637425036}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ee842d17b484643a920378b46635c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BGM
+  bgmSource: {fileID: 0}
+  bgmClip: {fileID: 0}
 --- !u!1 &1702650845
 GameObject:
   m_ObjectHideFlags: 0
