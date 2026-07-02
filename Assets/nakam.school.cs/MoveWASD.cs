@@ -26,7 +26,7 @@ public class MoveWASD : MonoBehaviour
     public GameObject hoseLeft;
     public GameObject hoseRight;
 
-    private Vector2 lookDirection = Vector2.down;
+    public Vector2 lookDirection = Vector2.down;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
