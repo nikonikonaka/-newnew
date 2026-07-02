@@ -1,30 +1,18 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class EraserALL : MonoBehaviour
 {
-    // 消火中の炎
-    List<FireController> targetFires =
-        new List<FireController>();
-
-    // 水
     public float maxWater = 100f;
     public float currentWater;
-
-    // 水減少速度
     public float waterUseSpeed = 20f;
-
-    // 水回復速度
     public float waterRecoverSpeed = 10f;
 
-    // UI
     public Slider waterSlider;
 
     void Start()
     {
         currentWater = maxWater;
-
         UpdateUI();
     }
 
@@ -63,14 +51,12 @@ public class EraserALL : MonoBehaviour
         if (usingHose && currentWater > 0 && touchingFire)
         {
             currentWater -= waterUseSpeed * Time.deltaTime;
-
             if (currentWater < 0)
                 currentWater = 0;
         }
         else
         {
             currentWater += waterRecoverSpeed * Time.deltaTime;
-
             if (currentWater > maxWater)
                 currentWater = maxWater;
         }
@@ -84,37 +70,6 @@ public class EraserALL : MonoBehaviour
         {
             waterSlider.maxValue = maxWater;
             waterSlider.value = currentWater;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Fire"))
-        {
-            FireController fire =
-                other.GetComponent<FireController>();
-
-            if (fire != null &&
-                !targetFires.Contains(fire))
-            {
-                targetFires.Add(fire);
-            }
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Fire"))
-        {
-            FireController fire =
-                other.GetComponent<FireController>();
-
-            if (fire != null)
-            {
-                fire.StopExtinguish();
-
-                targetFires.Remove(fire);
-            }
         }
     }
 }
