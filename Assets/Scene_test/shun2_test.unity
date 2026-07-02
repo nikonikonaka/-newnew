@@ -5079,6 +5079,7 @@ MonoBehaviour:
   hoseDown: {fileID: 1206456439}
   hoseLeft: {fileID: 1202925460}
   hoseRight: {fileID: 1814962913}
+  lookDirection: {x: 0, y: -1}
 --- !u!212 &1637425038
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5212,7 +5213,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637425036}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1

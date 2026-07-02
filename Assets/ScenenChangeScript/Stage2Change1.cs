@@ -6,7 +6,7 @@ public class Stage2Change : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("shun2");
+        SceneManager.LoadScene("st2");
     }
 
     public void ExitGame()

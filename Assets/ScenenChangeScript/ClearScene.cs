@@ -6,7 +6,7 @@ public class ClearSceneManager : MonoBehaviour
 {
     public void OnNextButton()
     {
-        string next = "shun" + StageData.currentStage;
+        string next = "st" + StageData.currentStage;
         SceneManager.LoadScene(next);
     }
 }
