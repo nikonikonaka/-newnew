@@ -39,12 +39,12 @@ public class PlayerLadder : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // 梯子アイテム取得だけ
-        if (other.CompareTag("LadderItem"))
+        /*if (other.CompareTag("LadderItem"))
         {
             hasLadder = true;
             Destroy(other.gameObject);
 
             Debug.Log("はしご取得");
-        }
+        }*/
     }
 }

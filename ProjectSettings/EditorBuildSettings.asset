@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelect.unity
     guid: 8576da2f00762aa47bc8d30138b3e4cb
   - enabled: 1
-    path: Assets/Scenes/shun1.unity
+    path: Assets/Scene_test/shun1_test.unity
     guid: a86a229880a9eb648ad465cb2c152653
   - enabled: 1
-    path: Assets/Scenes/shun2.unity
+    path: Assets/Scene_test/shun2_test.unity
     guid: fcd69c382e16b22469b0d27d3e2a39af
   - enabled: 1
-    path: Assets/Scenes/shun3.unity
+    path: Assets/Scene_test/shun3_test.unity
     guid: ed8b29d87b053594da0273255844f1a9
   - enabled: 1
     path: Assets/Scenes/ClearScene.unity
