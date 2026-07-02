@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6168031811836832502}
   - component: {fileID: 1548496499912460641}
   - component: {fileID: 6535579337119222589}
+  - component: {fileID: -2486602071498091608}
   m_Layer: 0
   m_Name: "\u53D6\u308B\u307B\u3046\u3058\u3083\u306A\u304F\u7F6E\u304F\u306F\u3057\u3054"
   m_TagString: Hole
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1000
   m_Sprite: {fileID: -6372805550172872992, guid: 7d914502f86c92f47a3fbda9e110397f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,3 +138,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.31664217, y: 0.43192956}
   m_EdgeRadius: 0
+--- !u!114 &-2486602071498091608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656943641581513742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fb3f239690d674c9a6f614f1b6a57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceFront2D
+  sortingOrder: 9999
