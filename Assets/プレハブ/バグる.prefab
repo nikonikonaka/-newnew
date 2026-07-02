@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 6527041249035661898}
   - component: {fileID: 6193770551352743134}
   m_Layer: 0
-  m_Name: "\u30D7\u30EC\u30A4\u30E4\u30FC1_0 p"
+  m_Name: "\u30D0\u30B0\u308B"
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,7 +708,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.1, y: 17.99}
+    oldSize: {x: 11.09, y: 19.65}
     newSize: {x: 0.3, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4148718006707882268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acd9134b6e3cd11408e706a4c5e4e544, type: 3}
   m_Name: 
