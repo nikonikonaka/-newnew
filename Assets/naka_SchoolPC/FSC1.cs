@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class FSC1 : MonoBehaviour
 {
-    public float maxDistance = 2.0f;     // 消火距離
+    public float maxDistance = 1.0f;     // 消火距離
     public float angleRange = 60f;       // 扇形の角度（左右30度）
-    public float forwardOffset = 0.6f;   // ホースの先端の位置
+    public float forwardOffset = 0.1f;   // ホースの先端の位置
 
     public ParticleSystem waterEffect;   // 水の噴射エフェクト
     public ParticleSystem steamEffect;   // 火に当たった時の蒸気
