@@ -5640,7 +5640,7 @@ Transform:
   m_GameObject: {fileID: 253885394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0012657401, w: 0.9999992}
-  m_LocalPosition: {x: -12.3404, y: -0.0666, z: 0}
+  m_LocalPosition: {x: -12.83, y: -0.0666, z: 0}
   m_LocalScale: {x: 7.2702756, y: 15.581277, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14187,7 +14187,6 @@ MonoBehaviour:
   angleRange: 60
   forwardOffset: 0.6
   waterEffect: {fileID: 36864962}
-  steamEffect: {fileID: 869765391}
   maxWater: 100
   currentWater: 0
   waterUseSpeed: 20
@@ -14199,12 +14198,6 @@ MonoBehaviour:
   waterEmissionRate: 400
   waterShapeAngle: 12
   waterShapeRadius: 0.05
-  steamStartSpeed: 0.8
-  steamStartLifetime: 0.9
-  steamStartSize: 0.35
-  steamEmissionRate: 60
-  steamShapeAngle: 35
-  steamShapeRadius: 0.02
 --- !u!1 &2033236660
 GameObject:
   m_ObjectHideFlags: 0
