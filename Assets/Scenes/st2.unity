@@ -701,11 +701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.53
+      value: 6.17
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.94
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -770,11 +770,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
   fireSprite: {fileID: 423909192}
-  explosionForce: 8
+  explosionForce: 10
   explosionDuration: 5
-  bigFireSize: 3
+  bigFireSize: 100
   useRigidbodyForce: 1
-  rigidbodyImpulse: 3
+  rigidbodyImpulse: 30
 --- !u!1001 &455490488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,6 +999,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464827983}
   m_CullTransparentMesh: 1
+--- !u!1 &490588459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 81520260463540905, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
+  m_PrefabInstance: {fileID: 829970992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &490588462 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3233743342945165096, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
+  m_PrefabInstance: {fileID: 829970992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &490588464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490588459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f56c22c3c19934188c041297577c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
+  fireSprite: {fileID: 490588462}
+  explosionForce: 5
+  explosionDuration: 0.2
+  bigFireSize: 2
+  useRigidbodyForce: 1
+  rigidbodyImpulse: 2
 --- !u!1 &526618890 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4656943641581513742, guid: a1773dd03c432ce40a7bb0ed41a14ccd, type: 3}
@@ -1099,19 +1127,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 174902606114009122, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4627415
+      value: 1.6991848
       objectReference: {fileID: 0}
     - target: {fileID: 174902606114009122, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0540638
+      value: 3.1249228
       objectReference: {fileID: 0}
     - target: {fileID: 174902606114009122, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.56
+      value: -6.5162
       objectReference: {fileID: 0}
     - target: {fileID: 174902606114009122, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.29
+      value: -3.0276
       objectReference: {fileID: 0}
     - target: {fileID: 174902606114009122, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1349,7 +1377,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 81520260463540905, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 490588464}
   m_SourcePrefab: {fileID: 100100000, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
 --- !u!1001 &835685141
 PrefabInstance:
@@ -1365,11 +1396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.33
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1434,9 +1465,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
   fireSprite: {fileID: 835685143}
-  explosionForce: 8
+  explosionForce: 100
   explosionDuration: 5
-  bigFireSize: 3
+  bigFireSize: 50
   useRigidbodyForce: 1
   rigidbodyImpulse: 3
 --- !u!1 &849283724
@@ -1767,8 +1798,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2943317627447973752, guid: e3a9a4d065d88034e98e427ca7d988a9, type: 3}
     - target: {fileID: 1360836340486024485, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
+      propertyPath: shakeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360836340486024485, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
       propertyPath: explosionForce
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360836340486024485, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
+      propertyPath: shakeMagnitude
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 1360836340486024485, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
       propertyPath: explosionDuration
@@ -1780,11 +1819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6673195855868816114, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.31
+      value: 3.48
       objectReference: {fileID: 0}
     - target: {fileID: 6673195855868816114, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.16
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 6673195855868816114, guid: 855e9e43a336c9046814e0915d129b00, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2374,9 +2413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
   fireSprite: {fileID: 1943441588}
-  explosionForce: 8
-  explosionDuration: 5
-  bigFireSize: 3
+  explosionForce: 15
+  explosionDuration: 15
+  bigFireSize: 6
   useRigidbodyForce: 1
   rigidbodyImpulse: 3
 --- !u!1001 &1825237373793199908
