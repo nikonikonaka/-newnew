@@ -20,13 +20,17 @@ public class MoveWASD : MonoBehaviour
     public Sprite rightWalkSprite;
     public Sprite leftWalkSprite;
 
+    // ホース使用画像
+    public Sprite hoseLeftSprite;
+    // ホース歩き画像
+    public Sprite hoseLeftWalkSprite;
     // ホース
     public GameObject hoseUp;
     public GameObject hoseDown;
     public GameObject hoseLeft;
     public GameObject hoseRight;
 
-    public Vector2 lookDirection = Vector2.down;
+    public Vector2 lookDirection = Vector2.up;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -43,11 +47,16 @@ public class MoveWASD : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        sr.flipX = false;
 
         hoseUp.SetActive(false);
         hoseDown.SetActive(false);
         hoseLeft.SetActive(false);
         hoseRight.SetActive(false);
+
+        // ★起動時に上向き画像を強制
+        lookDirection = Vector2.up;
+        sr.sprite = upSprite;
     }
 
     void Update()
@@ -144,40 +153,52 @@ public class MoveWASD : MonoBehaviour
 
     void ChangeSprite(float h, float v)
     {
+        // 向きを更新
         if (h > 0)
-        {
-            sr.sprite = walkFrame
-                ? rightWalkSprite
-                : rightSprite;
-
             lookDirection = Vector2.right;
-        }
         else if (h < 0)
-        {
-            sr.sprite = walkFrame
-                ? leftWalkSprite
-                : leftSprite;
-
             lookDirection = Vector2.left;
-        }
         else if (v > 0)
-        {
-            sr.sprite = walkFrame
-                ? upWalkSprite
-                : upSprite;
-
             lookDirection = Vector2.up;
-        }
         else if (v < 0)
-        {
-            sr.sprite = walkFrame
-                ? downWalkSprite
-                : downSprite;
-
             lookDirection = Vector2.down;
+
+        // Shift中で左右を向いている時だけホース画像
+        if (isUsingHose)
+        {
+            if (lookDirection == Vector2.left)
+            {
+                sr.sprite = walkFrame ? hoseLeftWalkSprite : hoseLeftSprite;
+                sr.flipX = false;
+                return;
+            }
+            else if (lookDirection == Vector2.right)
+            {
+                sr.sprite = walkFrame ? hoseLeftWalkSprite : hoseLeftSprite;
+                sr.flipX = true;
+                return;
+            }
+        }
+        // 通常画像
+        sr.flipX = false;
+
+        if (lookDirection == Vector2.right)
+        {
+            sr.sprite = (h > 0 && walkFrame) ? rightWalkSprite : rightSprite;
+        }
+        else if (lookDirection == Vector2.left)
+        {
+            sr.sprite = (h < 0 && walkFrame) ? leftWalkSprite : leftSprite;
+        }
+        else if (lookDirection == Vector2.up)
+        {
+            sr.sprite = (v > 0 && walkFrame) ? upWalkSprite : upSprite;
+        }
+        else if (lookDirection == Vector2.down)
+        {
+            sr.sprite = (v < 0 && walkFrame) ? downWalkSprite : downSprite;
         }
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (isUsingHose)

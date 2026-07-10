@@ -21,6 +21,10 @@ public class MoveArrow : MonoBehaviour
     public Sprite rightWalkSprite;
     public Sprite leftWalkSprite;
 
+    // 消火画像
+    public Sprite extinguisherLeftSprite;
+    public Sprite extinguisherLeftWalkSprite;
+
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
@@ -28,7 +32,7 @@ public class MoveArrow : MonoBehaviour
     private bool isKnockback = false;
 
     // 向き記憶
-    private Vector2 lookDirection = Vector2.down;
+    private Vector2 lookDirection = Vector2.up;
 
     // 歩きアニメ
     private float animTimer;
@@ -93,28 +97,57 @@ public class MoveArrow : MonoBehaviour
 
     void ChangeSprite(float h, float v)
     {
+        // 向きを更新
         if (h > 0)
-        {
-            sr.sprite = walkFrame ? rightWalkSprite : rightSprite;
             lookDirection = Vector2.right;
-        }
         else if (h < 0)
-        {
-            sr.sprite = walkFrame ? leftWalkSprite : leftSprite;
             lookDirection = Vector2.left;
-        }
         else if (v > 0)
-        {
-            sr.sprite = walkFrame ? upWalkSprite : upSprite;
             lookDirection = Vector2.up;
-        }
         else if (v < 0)
-        {
-            sr.sprite = walkFrame ? downWalkSprite : downSprite;
             lookDirection = Vector2.down;
+
+        // Enterを押している間は左右だけ消火画像
+        bool usingExtinguisher =
+            Input.GetKey(KeyCode.Return) ||
+            Input.GetKey(KeyCode.KeypadEnter);
+
+        if (usingExtinguisher)
+        {
+            if (lookDirection == Vector2.left)
+            {
+                sr.sprite = walkFrame ? extinguisherLeftWalkSprite : extinguisherLeftSprite;
+                sr.flipX = false;
+                return;
+            }
+            else if (lookDirection == Vector2.right)
+            {
+                sr.sprite = walkFrame ? extinguisherLeftWalkSprite : extinguisherLeftSprite;
+                sr.flipX = true;
+                return;
+            }
+        }
+
+        // 通常画像
+        sr.flipX = false;
+
+        if (lookDirection == Vector2.right)
+        {
+            sr.sprite = (h > 0 && walkFrame) ? rightWalkSprite : rightSprite;
+        }
+        else if (lookDirection == Vector2.left)
+        {
+            sr.sprite = (h < 0 && walkFrame) ? leftWalkSprite : leftSprite;
+        }
+        else if (lookDirection == Vector2.up)
+        {
+            sr.sprite = (v > 0 && walkFrame) ? upWalkSprite : upSprite;
+        }
+        else if (lookDirection == Vector2.down)
+        {
+            sr.sprite = (v < 0 && walkFrame) ? downWalkSprite : downSprite;
         }
     }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Fire"))

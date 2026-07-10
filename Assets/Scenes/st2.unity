@@ -2413,15 +2413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730479376141468054, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_Size.y
-      value: 13.146034
+      value: 9.786126
       objectReference: {fileID: 0}
     - target: {fileID: 1730479376141468054, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_Offset.x
-      value: -0.023848891
+      value: -0.02384901
       objectReference: {fileID: 0}
     - target: {fileID: 1730479376141468054, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_Offset.y
-      value: 0.2169466
+      value: -1.4630073
       objectReference: {fileID: 0}
     - target: {fileID: 2690418171459846597, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2500,9 +2500,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7093846819928750183, guid: 672432678432b434cacf90cb17d158ca, type: 3}
+      propertyPath: hoseLeftSprite
+      value: 
+      objectReference: {fileID: 4639625450962020426, guid: d93e725c7934a0f4b824475db61b1eb8, type: 3}
+    - target: {fileID: 7093846819928750183, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: rightWalkSprite
       value: 
       objectReference: {fileID: -8736465373177798964, guid: e4fe311a2b749e14cb8f6bb44bb5e779, type: 3}
+    - target: {fileID: 7093846819928750183, guid: 672432678432b434cacf90cb17d158ca, type: 3}
+      propertyPath: hoseLeftWalkSprite
+      value: 
+      objectReference: {fileID: 4527893816950654471, guid: a807303bdd9fb434bad9288543b23506, type: 3}
     - target: {fileID: 7407859431604778177, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -4.709961
@@ -7110,6 +7118,14 @@ PrefabInstance:
       propertyPath: rightWalkSprite
       value: 
       objectReference: {fileID: 5657584613822844313, guid: 4121822c5e95fce42961beb515df78b9, type: 3}
+    - target: {fileID: 580094553684298592, guid: 78152242a54150c4e9518d33045a8b52, type: 3}
+      propertyPath: extinguisherLeftSprite
+      value: 
+      objectReference: {fileID: -3440932971202716707, guid: 17cb56cceea1b8d459249e9255626988, type: 3}
+    - target: {fileID: 580094553684298592, guid: 78152242a54150c4e9518d33045a8b52, type: 3}
+      propertyPath: extinguisherLeftWalkSprite
+      value: 
+      objectReference: {fileID: 1166120076226304014, guid: 662455ce6053e324e91e3950092a5ebc, type: 3}
     - target: {fileID: 3929155947702856470, guid: 78152242a54150c4e9518d33045a8b52, type: 3}
       propertyPath: m_Size.x
       value: 4.6779222
