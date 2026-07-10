@@ -1021,9 +1021,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f56c22c3c19934188c041297577c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
-  fireSprite: {fileID: 490588462}
+  fireSprite: {fileID: 2143728766}
   explosionForce: 5
-  explosionDuration: 0.2
+  explosionDuration: 5
   bigFireSize: 2
   useRigidbodyForce: 1
   rigidbodyImpulse: 2
@@ -1336,11 +1336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.48
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1396,11 +1396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.6
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72
+      value: -1.34
       objectReference: {fileID: 0}
     - target: {fileID: 5795549041378802184, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1447,11 +1447,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 81520260463540905, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
   m_PrefabInstance: {fileID: 835685141}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &835685143 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3233743342945165096, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
-  m_PrefabInstance: {fileID: 835685141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &835685144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1464,12 +1459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f56c22c3c19934188c041297577c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireExplosion
-  fireSprite: {fileID: 835685143}
-  explosionForce: 100
+  fireSprite: {fileID: 490588462}
+  explosionForce: 15
   explosionDuration: 5
   bigFireSize: 50
   useRigidbodyForce: 1
-  rigidbodyImpulse: 3
+  rigidbodyImpulse: 10
 --- !u!1 &849283724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2413,11 @@ MonoBehaviour:
   bigFireSize: 6
   useRigidbodyForce: 1
   rigidbodyImpulse: 3
+--- !u!212 &2143728766 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3233743342945165096, guid: 60fd42a0d2da86c44b7c042074d607d4, type: 3}
+  m_PrefabInstance: {fileID: 790761068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1825237373793199908
 PrefabInstance:
   m_ObjectHideFlags: 0
