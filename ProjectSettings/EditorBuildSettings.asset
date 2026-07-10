@@ -36,13 +36,13 @@ EditorBuildSettings:
     path: Assets/Scenes/DebbugStage2.unity
     guid: 48c086010d70cfe498384f10ff57e9f4
   - enabled: 0
-    path: Assets/Scene_test/shun1_test.unity
+    path: Assets/naka_SchoolPC/Scene_test/shun1_test.unity
     guid: a86a229880a9eb648ad465cb2c152653
   - enabled: 0
-    path: Assets/Scene_test/shun2_test.unity
+    path: Assets/naka_SchoolPC/Scene_test/shun2_test.unity
     guid: fcd69c382e16b22469b0d27d3e2a39af
   - enabled: 0
-    path: Assets/Scene_test/shun3_test.unity
+    path: Assets/naka_SchoolPC/Scene_test/shun3_test.unity
     guid: ed8b29d87b053594da0273255844f1a9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
