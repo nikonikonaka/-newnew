@@ -38,8 +38,8 @@ public class LadderHandlerNew : MonoBehaviour
 
     void Update()
     {
-        // ¥ LeftShift ‚ğ‰Ÿ‚µ‚½uŠÔ‚ÉE‚¤ or İ’u‚ğÀs
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        // ¥ Shift ‚ğ‰Ÿ‚µ‚½uŠÔ‚ÉE‚¤ or İ’u‚ğÀs
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             Debug.Log("SHIFT");
 

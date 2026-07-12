@@ -649,7 +649,6 @@ GameObject:
   - component: {fileID: 4483992645012309668}
   - component: {fileID: 5890504421672884284}
   - component: {fileID: 2145050135943611329}
-  - component: {fileID: 8751105657725039824}
   - component: {fileID: 4656147105521805894}
   - component: {fileID: 7956969191755208315}
   m_Layer: 0
@@ -760,10 +759,13 @@ MonoBehaviour:
   downWalkSprite: {fileID: 6676870202666233833, guid: 2a4b15cd1e44fc64e94838f8efe38488, type: 3}
   rightWalkSprite: {fileID: -8736465373177798964, guid: e4fe311a2b749e14cb8f6bb44bb5e779, type: 3}
   leftWalkSprite: {fileID: 3667667128661100329, guid: b41bc8949edf6b449982d406ac451796, type: 3}
+  hoseLeftSprite: {fileID: 0}
+  hoseLeftWalkSprite: {fileID: 0}
   hoseUp: {fileID: 6652344416879719638}
   hoseDown: {fileID: 311971070467409022}
   hoseLeft: {fileID: 7158688975726157674}
   hoseRight: {fileID: 8117426161826342959}
+  lookDirection: {x: 0, y: 1}
 --- !u!61 &5890504421672884284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -837,23 +839,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &8751105657725039824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688830913664985037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b508e5efb70d9794da6d59a730e0026a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EraserALL
-  maxWater: 100
-  currentWater: 0
-  waterUseSpeed: 20
-  waterRecoverSpeed: 0.1
-  waterSlider: {fileID: 9169977242314441188}
 --- !u!114 &4656147105521805894
 MonoBehaviour:
   m_ObjectHideFlags: 0
