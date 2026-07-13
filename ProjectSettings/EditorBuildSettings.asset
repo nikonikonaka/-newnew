@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelect.unity
     guid: 8576da2f00762aa47bc8d30138b3e4cb
   - enabled: 1
-    path: Assets/Scenes/st1.unity
+    path: Assets/naka_SchoolPC/Scene_test/st1_old.unity
     guid: 7151398ab3d45e7408d67a0607e0ed70
   - enabled: 1
     path: Assets/Scenes/st2.unity
