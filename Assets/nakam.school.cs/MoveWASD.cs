@@ -204,34 +204,46 @@ public class MoveWASD : MonoBehaviour
         if (isUsingHose)
             return;
 
+        Vector2 dir = (transform.position - collision.transform.position).normalized;
+
         if (collision.gameObject.CompareTag("Fire"))
         {
-            Vector2 dir =
-                (transform.position -
-                collision.transform.position).normalized;
+            StartCoroutine(DoKnockback(dir, false)); // 通常
+        }
 
-            StartCoroutine(DoKnockback(dir));
+        if (collision.gameObject.CompareTag("Laser"))
+        {
+            StartCoroutine(DoKnockback(dir, true)); // ★ Laserだけ強ノックバック
         }
     }
 
-    IEnumerator DoKnockback(Vector2 dir)
+
+    public IEnumerator DoKnockback(Vector2 dir, bool isLaser)
     {
         isKnockback = true;
 
         rb.linearVelocity = Vector2.zero;
 
-        rb.AddForce(
-            dir * knockbackForce,
-            ForceMode2D.Impulse
-        );
+        if (isLaser)
+        {
+            // プレイヤーの進行方向の逆
+            dir = -input;
 
-        yield return new WaitForSeconds(knockbackTime);
+            // 止まっている時は向いている方向の逆
+            if (dir == Vector2.zero)
+            {
+                dir = -lookDirection;
+            }
+        }
+
+        float force = isLaser ? knockbackForce * 1f : knockbackForce;
+        float time = isLaser ? knockbackTime * 1.2f : knockbackTime;
+
+        rb.AddForce(dir.normalized * force, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(time);
 
         rb.linearVelocity = Vector2.zero;
-
         isKnockback = false;
     }
-
-
 }
-

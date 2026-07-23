@@ -13,6 +13,8 @@ TagManager:
   - Hole
   - Ladder
   - window
+  - Wall
+  - Laser
   layers:
   - Default
   - TransparentFX
