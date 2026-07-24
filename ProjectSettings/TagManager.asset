@@ -3,9 +3,6 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-<<<<<<< HEAD
-  tags: []
-=======
   tags:
   - Fire
   - RESPER
@@ -17,21 +14,7 @@ TagManager:
   - Ladder
   - window
   - Wall
-<<<<<<< HEAD
-  - Hydrant
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - Hydrant
-=======
   - Laser
->>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
->>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
-=======
-  - Laser
->>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
->>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
->>>>>>> 131ccd39d7c79c5bcb29b2b31059ed6457517c3c
   layers:
   - Default
   - TransparentFX
