@@ -162,9 +162,25 @@ public class MoveArrow : MonoBehaviour
 
             StartCoroutine(DoKnockback(dir));
         }
+      
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
 
-    IEnumerator DoKnockback(Vector2 dir)
+    public IEnumerator DoKnockback(Vector2 dir)
+=======
+    public IEnumerator DoKnockback(Vector2 dir, bool isLaser)
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
+    {
+        if (isKnockback)
+            yield break;
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
+
+    public IEnumerator DoKnockback(Vector2 dir)
     {
         isKnockback = true;
 
@@ -177,5 +193,20 @@ public class MoveArrow : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         isKnockback = false;
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hydrant"))
+        {
+            Debug.Log("Á‰ÎğÚG");
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Debug.Log("ŠJ•ú");
+
+                collision.gameObject.GetComponent<Hydrant>().isOpened = true;
+            }
+        }
     }
 }
