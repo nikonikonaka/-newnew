@@ -218,7 +218,13 @@ public class MoveWASD : MonoBehaviour
     public IEnumerator DoKnockback(Vector2 dir)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     public IEnumerator DoKnockback(Vector2 dir)
+=======
+
+    public IEnumerator DoKnockback(Vector2 dir, bool isLaser)
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
 =======
 
     public IEnumerator DoKnockback(Vector2 dir, bool isLaser)

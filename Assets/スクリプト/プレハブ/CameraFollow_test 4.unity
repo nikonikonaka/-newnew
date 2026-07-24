@@ -3916,8 +3916,14 @@ Transform:
   m_LocalScale: {x: 0.06, y: 0.07, z: 1}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 5.2, y: 2.62, z: 0}
   m_LocalScale: {x: 0.06, y: 0.07, z: 1}
+=======
+  m_LocalPosition: {x: 4.61, y: 2.9, z: 0}
+  m_LocalScale: {x: 0.019164, y: 0.013118, z: 1}
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
 =======
   m_LocalPosition: {x: 4.61, y: 2.9, z: 0}
   m_LocalScale: {x: 0.019164, y: 0.013118, z: 1}
@@ -3969,7 +3975,12 @@ BoxCollider2D:
     oldSize: {x: 13.27, y: 15.35}
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     oldSize: {x: 13.27, y: 15.35}
+=======
+    oldSize: {x: 82.9375, y: 95.9375}
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
 =======
     oldSize: {x: 82.9375, y: 95.9375}
 >>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
