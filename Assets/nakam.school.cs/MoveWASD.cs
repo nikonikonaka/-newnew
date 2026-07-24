@@ -214,7 +214,7 @@ public class MoveWASD : MonoBehaviour
         }
     }
 
-    IEnumerator DoKnockback(Vector2 dir)
+    public IEnumerator DoKnockback(Vector2 dir)
     {
         isKnockback = true;
 

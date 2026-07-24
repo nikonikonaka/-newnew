@@ -162,9 +162,10 @@ public class MoveArrow : MonoBehaviour
 
             StartCoroutine(DoKnockback(dir));
         }
+      
     }
 
-    IEnumerator DoKnockback(Vector2 dir)
+    public IEnumerator DoKnockback(Vector2 dir)
     {
         isKnockback = true;
 
@@ -177,5 +178,20 @@ public class MoveArrow : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         isKnockback = false;
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hydrant"))
+        {
+            Debug.Log("Á‰ÎğÚG");
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Debug.Log("ŠJ•ú");
+
+                collision.gameObject.GetComponent<Hydrant>().isOpened = true;
+            }
+        }
     }
 }
