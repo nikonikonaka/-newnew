@@ -150,49 +150,60 @@ public class MoveArrow : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Fire
         if (collision.gameObject.CompareTag("Fire"))
         {
+            // Enterキーを押している間はノックバックしない
             if (Input.GetKey(KeyCode.Return) ||
                 Input.GetKey(KeyCode.KeypadEnter))
                 return;
 
-            Vector2 dir = (transform.position - collision.transform.position).normalized;
-            StartCoroutine(DoKnockback(dir, false));
+            Vector2 dir =
+                (transform.position - collision.transform.position).normalized;
+
+            StartCoroutine(DoKnockback(dir));
         }
-
-        // Laser
-        if (collision.gameObject.CompareTag("Laser"))
-        {
-            Vector2 dir = -input;
-
-            // 止まっている時は向いている方向の逆
-            if (dir == Vector2.zero)
-            {
-                dir = -lookDirection;
-            }
-
-            StartCoroutine(DoKnockback(dir, true));
-        }
+      
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    public IEnumerator DoKnockback(Vector2 dir)
+=======
     public IEnumerator DoKnockback(Vector2 dir, bool isLaser)
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
     {
         if (isKnockback)
             yield break;
+>>>>>>> 9c222a2a3217e6d8572d20de01310eab334a38a2
 
+    public IEnumerator DoKnockback(Vector2 dir)
+    {
         isKnockback = true;
 
         rb.linearVelocity = Vector2.zero;
 
-        float force = isLaser ? knockbackForce * 1f : knockbackForce;
-        float time = isLaser ? knockbackTime * 1.2f : knockbackTime;
+        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
 
-        rb.AddForce(dir.normalized * force, ForceMode2D.Impulse);
-
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(knockbackTime);
 
         rb.linearVelocity = Vector2.zero;
 
         isKnockback = false;
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hydrant"))
+        {
+            Debug.Log("消火栓接触");
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Debug.Log("開放");
+
+                collision.gameObject.GetComponent<Hydrant>().isOpened = true;
+            }
+        }
     }
 }
