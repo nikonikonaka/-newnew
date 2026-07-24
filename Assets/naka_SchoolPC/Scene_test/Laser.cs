@@ -32,7 +32,7 @@ public class Laser : MonoBehaviour
             {
                 MoveWASD p1 = hit.collider.GetComponent<MoveWASD>();
                 if (p1 != null)
-                    p1.StartCoroutine(p1.DoKnockback(dir));
+                    p1.StartCoroutine(p1.DoKnockback(dir, true));
             }
 
             // Player2（矢印キー）
