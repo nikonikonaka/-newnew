@@ -14,7 +14,11 @@ TagManager:
   - Ladder
   - window
   - Wall
+<<<<<<< HEAD
   - Hydrant
+=======
+  - Laser
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
   layers:
   - Default
   - TransparentFX

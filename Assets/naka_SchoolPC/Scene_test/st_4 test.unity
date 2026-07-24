@@ -4642,6 +4642,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1290298790
 GameObject:
   m_ObjectHideFlags: 0
@@ -4793,6 +4794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RescuePerson
   rescued: 1
+=======
+>>>>>>> d013112d02afb80063a459189eadaf976af5a1ff
 --- !u!1 &1320075747
 GameObject:
   m_ObjectHideFlags: 0
@@ -14777,7 +14780,6 @@ SceneRoots:
   - {fileID: 966686067}
   - {fileID: 543365605}
   - {fileID: 719174129}
-  - {fileID: 1290298794}
   - {fileID: 773247479}
   - {fileID: 1836463344}
   - {fileID: 492136496}
