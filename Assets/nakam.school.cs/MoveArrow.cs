@@ -150,50 +150,47 @@ public class MoveArrow : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+     
+        Vector2 dir = (transform.position - collision.transform.position).normalized;
+
         if (collision.gameObject.CompareTag("Fire"))
         {
-            // Enterキーを押している間はノックバックしない
-            if (Input.GetKey(KeyCode.Return) ||
-                Input.GetKey(KeyCode.KeypadEnter))
-                return;
-
-            Vector2 dir =
-                (transform.position - collision.transform.position).normalized;
-
-            StartCoroutine(DoKnockback(dir));
+            StartCoroutine(DoKnockback(dir, false)); // 通常
         }
-      
+
+        if (collision.gameObject.CompareTag("Laser"))
+        {
+            StartCoroutine(DoKnockback(dir, true)); // ★ Laserだけ強ノックバック
+        }
     }
 
 
- 
-    public IEnumerator DoKnockback(Vector2 dir)
+    public IEnumerator DoKnockback(Vector2 dir, bool isLaser)
     {
         isKnockback = true;
 
         rb.linearVelocity = Vector2.zero;
 
-        rb.AddForce(dir * knockbackForce, ForceMode2D.Impulse);
-
-        yield return new WaitForSeconds(knockbackTime);
-
-        rb.linearVelocity = Vector2.zero;
-
-        isKnockback = false;
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Hydrant"))
+        if (isLaser)
         {
-            Debug.Log("消火栓接触");
+            // プレイヤーの進行方向の逆
+            dir = -input;
 
-            if (Input.GetKey(KeyCode.Return))
+            // 止まっている時は向いている方向の逆
+            if (dir == Vector2.zero)
             {
-                Debug.Log("開放");
-
-                collision.gameObject.GetComponent<Hydrant>().isOpened = true;
+                dir = -lookDirection;
             }
         }
+
+        float force = isLaser ? knockbackForce * 1f : knockbackForce;
+        float time = isLaser ? knockbackTime * 1.2f : knockbackTime;
+
+        rb.AddForce(dir.normalized * force, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(time);
+
+        rb.linearVelocity = Vector2.zero;
+        isKnockback = false;
     }
 }
