@@ -40,7 +40,7 @@ public class LightningLaser : MonoBehaviour
             if (player2 != null && Time.time >= nextKnockbackTime)
             {
                 nextKnockbackTime = Time.time + knockbackInterval;
-                player2.StartCoroutine(player2.DoKnockback(Vector2.zero, true));
+                player2.StartCoroutine(player2.DoKnockback(Vector2.zero,true));
             }
         }
 
