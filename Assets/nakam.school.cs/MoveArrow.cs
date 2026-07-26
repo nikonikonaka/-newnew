@@ -158,10 +158,11 @@ public class MoveArrow : MonoBehaviour
             StartCoroutine(DoKnockback(dir, false)); // 通常
         }
 
-        if (collision.gameObject.CompareTag("Laser"))
+        else if (collision.gameObject.CompareTag("Laser"))
         {
             StartCoroutine(DoKnockback(dir, true)); // ★ Laserだけ強ノックバック
         }
+   
     }
 
 
@@ -192,5 +193,20 @@ public class MoveArrow : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hydrant"))
+        {
+            Debug.Log("消火栓接触");
+
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Debug.Log("開放");
+
+                collision.gameObject.GetComponent<Hydrant>().isOpened = true;
+            }
+        }
     }
 }

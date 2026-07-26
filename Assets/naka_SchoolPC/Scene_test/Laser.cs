@@ -10,12 +10,21 @@ public class Laser : MonoBehaviour
     public int segments = 4;
     public float jaggedness = 0.1f;
 
+    public bool laserActive = true;
+
     // ノックバックの連続発動防止
     public float knockbackInterval = 0.3f;
     private float nextKnockbackTime;
 
     void Update()
     {
+
+        if (!laserActive)
+        {
+            line.enabled = false;   // レーザー非表示
+            return;                 // 以降の処理を全部止める
+        }
+
         Vector2 start = firePoint.position;
         Vector2 dir = firePoint.up.normalized;
 
@@ -26,7 +35,9 @@ public class Laser : MonoBehaviour
         if (hit.collider != null)
         {
             endPos = hit.point;   // ★プレイヤーでも壁でもここで止める
-
+                                  // ★レーザー停止中なら何もするな
+            if (!laserActive)
+                return;
             // Player1
             MoveWASD player1 = hit.collider.GetComponent<MoveWASD>();
             if (player1 != null && Time.time >= nextKnockbackTime)
@@ -58,6 +69,17 @@ public class Laser : MonoBehaviour
             }
 
             line.SetPosition(i, pos);
+        }
+
+
+    }
+    public void StopLaser()
+    {
+        laserActive = false;
+
+        if (line != null)
+        {
+            line.enabled = false;
         }
     }
 }
