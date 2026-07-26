@@ -106,6 +106,8 @@ public class MoveWASD : MonoBehaviour
             Input.GetKey(KeyCode.LeftShift) ||
             Input.GetKey(KeyCode.RightShift);
 
+   
+
         hoseUp.SetActive(false);
         hoseDown.SetActive(false);
         hoseLeft.SetActive(false);
