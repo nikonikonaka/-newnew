@@ -6195,7 +6195,7 @@ MonoBehaviour:
   maxWater: 100
   currentWater: 0
   waterUseSpeed: 20
-  waterRecoverSpeed: 10
+  waterRecoverSpeed: 5
   waterSlider: {fileID: 2523805406949644617}
   waterStartSpeed: 6
   waterStartLifetime: 0.7
@@ -6233,7 +6233,7 @@ MonoBehaviour:
   maxWater: 100
   currentWater: 0
   waterUseSpeed: 20
-  waterRecoverSpeed: 10
+  waterRecoverSpeed: 1
   waterSlider: {fileID: 2523805406949644617}
 --- !u!1 &6145539757341972757
 GameObject:
