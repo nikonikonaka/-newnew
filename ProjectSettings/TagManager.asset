@@ -15,6 +15,7 @@ TagManager:
   - window
   - Wall
   - Laser
+  - Hydrant
   layers:
   - Default
   - TransparentFX
