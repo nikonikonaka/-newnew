@@ -6208,7 +6208,11 @@ MonoBehaviour:
   maxWater: 110
   currentWater: 0
   waterUseSpeed: 20
+<<<<<<< HEAD
   waterRecoverSpeed: 2.5
+=======
+  waterRecoverSpeed: 5
+>>>>>>> 3e1d726f84c724949abf3386fc1598c5429173e5
   waterSlider: {fileID: 2523805406949644617}
   waterStartSpeed: 6
   waterStartLifetime: 0.7
@@ -6245,7 +6249,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EraserALL
   maxWater: 100
   currentWater: 0
+<<<<<<< HEAD
   waterUseSpeed: 40
+=======
+  waterUseSpeed: 20
+>>>>>>> 3e1d726f84c724949abf3386fc1598c5429173e5
   waterRecoverSpeed: 1
   waterSlider: {fileID: 2523805406949644617}
 --- !u!114 &1469850532355313457
