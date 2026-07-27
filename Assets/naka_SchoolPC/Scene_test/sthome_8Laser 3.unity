@@ -826,10 +826,10 @@ GameObject:
   m_Component:
   - component: {fileID: 168227509}
   - component: {fileID: 168227508}
-  - component: {fileID: 168227507}
   - component: {fileID: 168227511}
   - component: {fileID: 168227510}
   - component: {fileID: 168227512}
+  - component: {fileID: 168227513}
   m_Layer: 0
   m_Name: "\u30EC\u30FC\u30B6\u30FC"
   m_TagString: Untagged
@@ -837,25 +837,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &168227507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168227506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e753cd2749db51469cad618bb6f1a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserGate2D
-  firePoint: {fileID: 198623016}
-  maxDistance: 20
-  line: {fileID: 198623015}
-  wallTag: Wall
-  segments: 10
-  jaggedness: 0.1
-  knockbackInterval: 0.3
 --- !u!212 &168227508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1022,6 +1003,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &168227513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168227506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14760e4f1eccd5b4f9344b23b8e49723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Laser
+  firePoint: {fileID: 198623016}
+  maxDistance: 20
+  line: {fileID: 198623015}
+  wallTag: Wall
+  segments: 4
+  jaggedness: 0.1
+  laserActive: 1
+  knockbackInterval: 0.3
 --- !u!1001 &184046239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9077,6 +9078,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4926295629921293298, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
   m_PrefabInstance: {fileID: 2971950036884800682}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1936044782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936044781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14760e4f1eccd5b4f9344b23b8e49723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Laser
+  firePoint: {fileID: 2971950036884800683}
+  maxDistance: 20
+  line: {fileID: 2971950036884800684}
+  wallTag: Wall
+  segments: 4
+  jaggedness: 0.1
+  laserActive: 1
+  knockbackInterval: 0.3
 --- !u!1 &1949705789
 GameObject:
   m_ObjectHideFlags: 0
@@ -21702,6 +21723,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9064658227847625338, guid: ba279e34462ced0458a65ee9902c2d7b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22082,11 +22107,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6010735149885968437, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4926295629921293298, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1936044782}
   m_SourcePrefab: {fileID: 100100000, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
+--- !u!4 &2971950036884800683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8808093583034832077, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
+  m_PrefabInstance: {fileID: 2971950036884800682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &2971950036884800684 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 8331223262059216381, guid: deb5f710138c2e347bd8f9f3ad33ac12, type: 3}
+  m_PrefabInstance: {fileID: 2971950036884800682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3178039729864339792
 PrefabInstance:
   m_ObjectHideFlags: 0
