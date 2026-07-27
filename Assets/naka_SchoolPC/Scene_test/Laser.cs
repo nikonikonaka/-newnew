@@ -2,46 +2,84 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public Transform startPoint;
+    public Transform firePoint;
     public float maxDistance = 20f;
-    public LayerMask hitMask;
+    public LineRenderer line;
+    public string wallTag = "Wall";
 
-    public bool isActive = true;
+    public int segments = 4;
+    public float jaggedness = 0.1f;
+
+    public bool laserActive = true;
+
+    // ノックバックの連続発動防止
+    public float knockbackInterval = 0.3f;
+    private float nextKnockbackTime;
 
     void Update()
     {
-        if (!isActive) return;
 
-        RaycastHit2D hit = Physics2D.Raycast(
-            startPoint.position,
-            startPoint.right,
-            maxDistance,
-            hitMask
-        );
+        if (!laserActive)
+        {
+            line.enabled = false;   // レーザー非表示
+            return;                 // 以降の処理を全部止める
+        }
+
+        Vector2 start = firePoint.position;
+        Vector2 dir = firePoint.up.normalized;
+
+        RaycastHit2D hit = Physics2D.Raycast(start, dir, maxDistance);
+
+        Vector2 endPos = start + dir * maxDistance;
 
         if (hit.collider != null)
         {
-            // がれきで止まる
-            if (hit.collider.CompareTag("Debris"))
+            endPos = hit.point;   // ★プレイヤーでも壁でもここで止める
+                                  // ★レーザー停止中なら何もするな
+            if (!laserActive)
                 return;
-
-            Vector2 dir = (hit.collider.transform.position - startPoint.position).normalized;
-
-            // Player1（WASD）
-            if (hit.collider.CompareTag("Player1"))
+            // Player1
+            MoveWASD player1 = hit.collider.GetComponent<MoveWASD>();
+            if (player1 != null && Time.time >= nextKnockbackTime)
             {
-                MoveWASD p1 = hit.collider.GetComponent<MoveWASD>();
-                if (p1 != null)
-                    p1.StartCoroutine(p1.DoKnockback(dir, true));
+                nextKnockbackTime = Time.time + knockbackInterval;
+                player1.StartCoroutine(player1.DoKnockback(Vector2.zero, true));
             }
 
-            // Player2（矢印キー）
-            if (hit.collider.CompareTag("Player2"))
+            // Player2
+            MoveArrow player2 = hit.collider.GetComponent<MoveArrow>();
+            if (player2 != null && Time.time >= nextKnockbackTime)
             {
-                MoveArrow p2 = hit.collider.GetComponent<MoveArrow>();
-                if (p2 != null)
-                    p2.StartCoroutine(p2.DoKnockback(dir));
+                nextKnockbackTime = Time.time + knockbackInterval;
+                player2.StartCoroutine(player2.DoKnockback(Vector2.zero, true));
             }
+        }
+
+        line.positionCount = segments + 1;
+
+        for (int i = 0; i <= segments; i++)
+        {
+            float t = (float)i / segments;
+            Vector2 pos = Vector2.Lerp(start, endPos, t);
+
+            if (i != 0 && i != segments)
+            {
+                Vector2 perpendicular = new Vector2(-dir.y, dir.x);
+                pos += perpendicular * Random.Range(-jaggedness, jaggedness);
+            }
+
+            line.SetPosition(i, pos);
+        }
+
+
+    }
+    public void StopLaser()
+    {
+        laserActive = false;
+
+        if (line != null)
+        {
+            line.enabled = false;
         }
     }
 }
