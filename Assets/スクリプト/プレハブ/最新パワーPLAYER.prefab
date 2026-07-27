@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6320816289205318318}
   m_Layer: 0
   m_Name: hoseObject left
-  m_TagString: Hose
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 11.2, y: 1931}
+  m_AnchoredPosition: {x: 36681, y: 20893}
   m_SizeDelta: {x: -42, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &199413325955285651
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 5507230600582878328}
   m_Layer: 0
   m_Name: hoseObject right
-  m_TagString: Hose
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 178.4, y: 103.6}
+  m_AnchoredPosition: {x: 2.2, y: 13.7}
   m_SizeDelta: {x: 737, y: 415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5723089084246499489
@@ -742,7 +742,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!114 &2679165298210935275
 MonoBehaviour:
@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 6237494461373882487}
   m_Layer: 0
   m_Name: hoseObject down
-  m_TagString: Hose
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5850,20 +5850,32 @@ MonoBehaviour:
   m_FillRect: {fileID: 1768873536549000923}
   m_HandleRect: {fileID: 1791422420238874777}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 100
+  m_MinValue: -55
+  m_MaxValue: 200
+  m_WholeNumbers: 1
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2101535048889847314}
+        m_TargetAssemblyTypeName: EraserALL, Assembly-CSharp
+        m_MethodName: set_useGUILayout
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 194558806405103617}
+        m_TargetAssemblyTypeName: FSC_NO2, Assembly-CSharp
+        m_MethodName: set_useGUILayout
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5902,6 +5914,7 @@ GameObject:
   - component: {fileID: 194558806405103617}
   - component: {fileID: 2912171178954306186}
   - component: {fileID: 2101535048889847314}
+  - component: {fileID: 1469850532355313457}
   m_Layer: 0
   m_Name: "\u6700\u65B0\u30D1\u30EF\u30FCPLAYER"
   m_TagString: Player1
@@ -6002,7 +6015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveWASD
   speed: 2.5
   knockbackForce: 3
-  knockbackTime: 0.2
+  knockbackTime: 0.4
   upSprite: {fileID: -8544906439916621513, guid: 2da18f9c2cfaaa44f9149fbb176cc6a5, type: 3}
   downSprite: {fileID: -6594073380962191338, guid: 87883c6f7fc42394a897993bc1089c74, type: 3}
   rightSprite: {fileID: 3724257746112637289, guid: e6b63846966babb47ac5be0d9792ed19, type: 3}
@@ -6192,10 +6205,10 @@ MonoBehaviour:
   hitWidth: 1
   forwardOffset: 0.3
   waterEffect: {fileID: 558310159589808975}
-  maxWater: 100
+  maxWater: 110
   currentWater: 0
   waterUseSpeed: 20
-  waterRecoverSpeed: 10
+  waterRecoverSpeed: 2.5
   waterSlider: {fileID: 2523805406949644617}
   waterStartSpeed: 6
   waterStartLifetime: 0.7
@@ -6232,9 +6245,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EraserALL
   maxWater: 100
   currentWater: 0
-  waterUseSpeed: 20
-  waterRecoverSpeed: 10
+  waterUseSpeed: 40
+  waterRecoverSpeed: 1
   waterSlider: {fileID: 2523805406949644617}
+--- !u!114 &1469850532355313457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858785794226911887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957305f50b38f7545ab58edb7f8c5c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RESCON_p
+  rescueText: {fileID: 0}
 --- !u!1 &6145539757341972757
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,7 +6353,7 @@ GameObject:
   - component: {fileID: 7651334463836983322}
   m_Layer: 0
   m_Name: hoseObject up
-  m_TagString: Hose
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

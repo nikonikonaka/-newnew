@@ -55,14 +55,26 @@ public class RESCON : MonoBehaviour
         rescueText.text = "People: " + remaining;
     }
 
+    private void FindPeople()
+    {
+        people = GameObject.FindGameObjectsWithTag("RESPER");
+    }
+
     public int GetRemainingPeople()
     {
+        if (people == null)
+        {
+            FindPeople();
+        }
+
         int remaining = 0;
 
         foreach (GameObject p in people)
         {
             if (p != null && p.activeSelf)
+            {
                 remaining++;
+            }
         }
 
         return remaining;

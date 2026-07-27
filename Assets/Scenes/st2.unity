@@ -772,7 +772,7 @@ MonoBehaviour:
   fireSprite: {fileID: 423909192}
   explosionForce: 10
   explosionDuration: 5
-  bigFireSize: 100
+  bigFireSize: 1
   useRigidbodyForce: 1
   rigidbodyImpulse: 30
 --- !u!1001 &455490488
