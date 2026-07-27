@@ -275,13 +275,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007190433628436681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 539dd344c9f306c448149515f1d5445d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SearchRes
   arrowPrefab: {fileID: 7010584702750269046, guid: e8da875c8cfb8ae40b6b87e6a5b8eb23, type: 3}
-  arrowCanvas: {fileID: 0}
+  arrowCanvas: {fileID: 8558808815826836889, guid: 3fc40de602c534649b9f581e095434a8, type: 3}
   targetCamera: {fileID: 873070905824026214}
   arrowMargin: 80
   arrowScale: 1

@@ -49,7 +49,7 @@ public class Hydrant : MonoBehaviour
 
             if (eraser != null)
             {
-                eraser.currentWater += (supplySpeed / 10 * Time.deltaTime) ;
+                eraser.currentWater += (supplySpeed / 5 * Time.deltaTime) ;
                 eraser.currentWater =
                     Mathf.Clamp(eraser.currentWater, 0, eraser.maxWater);
             }

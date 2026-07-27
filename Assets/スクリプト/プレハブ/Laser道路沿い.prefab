@@ -357,10 +357,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2007162263788320698}
   - component: {fileID: 7089099633607446067}
-  - component: {fileID: 6010735149885968437}
   - component: {fileID: 2968865823162819391}
   - component: {fileID: 531007302433637746}
   - component: {fileID: 3965820791088091706}
+  - component: {fileID: 4715531177545621801}
   m_Layer: 0
   m_Name: "\u30EC\u30FC\u30B6\u30FC (1)"
   m_TagString: Untagged
@@ -442,25 +442,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6010735149885968437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4926295629921293298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e753cd2749db51469cad618bb6f1a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserGate2D
-  firePoint: {fileID: 8808093583034832077}
-  maxDistance: 20
-  line: {fileID: 8331223262059216381}
-  wallTag: Wall
-  segments: 10
-  jaggedness: 0.1
-  knockbackInterval: 0.3
 --- !u!50 &2968865823162819391
 Rigidbody2D:
   serializedVersion: 5
@@ -553,3 +534,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &4715531177545621801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4926295629921293298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14760e4f1eccd5b4f9344b23b8e49723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Laser
+  firePoint: {fileID: 8808093583034832077}
+  maxDistance: 20
+  line: {fileID: 8331223262059216381}
+  wallTag: Wall
+  segments: 4
+  jaggedness: 0.1
+  laserActive: 1
+  knockbackInterval: 0.3
