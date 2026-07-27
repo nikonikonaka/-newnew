@@ -1,7 +1,0 @@
-diff a/Assets/naka_SchoolPC/Scene_test/st3.unity b/Assets/naka_SchoolPC/Scene_test/st3.unity	(rejected hunks)
-@@ -1837,3 +1837,5 @@
-   - {fileID: 1497596151}
-   - {fileID: 1012407291}
-   - {fileID: 1633734800}
-+=======
-+>>>>>>> 3e1d726f84c724949abf3386fc1598c5429173e5
