@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8156787383427892594}
   - component: {fileID: 2359774593887429769}
   - component: {fileID: 2807712244448727735}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u30D5\u30A1\u30A4\u30E4\u30FC\u30DC\u30FC\u30EB"
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   gravity: 0
   lifeTime: 53
   flameSprite: {fileID: -2954829913300870419, guid: d5cea3926b3309d4b9c4940ff491853c, type: 3}
+  owner: {fileID: 0}
 --- !u!50 &2807712244448727735
 Rigidbody2D:
   serializedVersion: 5

@@ -6406,9 +6406,26 @@ MonoBehaviour:
   players:
   - {fileID: 106374050143945184}
   - {fileID: 3272592829740398607}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  moveSpeed: 10
+  sightRange: 10
+  attackRange: 6
+  escapeRange: 2
+  strafeRadius: 4
+  strafeSideStepChance: 0.3
+  sideStepDistance: 1.2
   fireBallPrefab: {fileID: 4622481828126046643, guid: 4158482da007be941be19c37cdefed84, type: 3}
-  shootInterval: 1.5
-  moveSpeed: 2
+  flameDuration: 0.8
+  flameIntervalMin: 0.15
+  flameIntervalMax: 0.2
+  aimMinTime: 0.3
+  aimMaxTime: 0.5
+  cooldownTime: 1
+  fireSpawnOffset: 1.2
+  fireDirSpread: 0.15
+  firePosJitter: 0.15
   spriteUp: {fileID: -3416960411734898597, guid: 5471800dfaa8f6b4abcabba29618d6cf, type: 3}
   spriteDown: {fileID: -3326467329938346619, guid: 122b7483c0941ba4081b70b2af996522, type: 3}
   spriteLeft: {fileID: 1166120076226304014, guid: f86d321bbd20ac24e937a237909a4f08, type: 3}

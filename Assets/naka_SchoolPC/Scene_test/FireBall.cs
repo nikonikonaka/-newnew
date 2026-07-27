@@ -2,70 +2,47 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    public float speed = 12f;
-    public float gravityDelay = 0.25f;
-    public float gravity = 12f;
-    public float lifeTime = 5f;
+    public float speed = 14f;
 
-    Vector2 direction;
-    float timer = 0f;
-    bool falling = false;
-    bool ignited = false;
+    [Header("火")]
+    public GameObject groundFirePrefab;
+    [Range(0f, 1f)]
+    public float igniteChance = 0.6f;
 
-    SpriteRenderer sr;
-    public Sprite flameSprite;
+    public GameObject owner;
 
-    Rigidbody2D rb;
-
-    void Start()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-    }
+    private Vector2 direction;
 
     public void Init(Vector2 dir)
     {
         direction = dir.normalized;
     }
 
-    void Update()
+    private void Update()
     {
-        if (ignited) return;
-
-        timer += Time.deltaTime;
-
-        if (!falling)
-        {
-            // 前へ強く飛ぶ（火炎放射）
-            transform.Translate(direction * speed * Time.deltaTime);
-
-            if (timer > gravityDelay)
-                falling = true;
-        }
-        else
-        {
-            // 落下
-            transform.Translate(Vector2.down * gravity * Time.deltaTime);
-        }
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (ignited) return;
+        // 自分には当たらない
+        if (owner != null && col.gameObject == owner)
+            return;
 
-        Ignite();
-    }
+        // 壁・床・障害物に当たったら火を作る
+        if (col.gameObject.CompareTag("Wall")
+            )
+        {
+            if (groundFirePrefab != null && Random.value <= igniteChance)
+            {
+                Instantiate(groundFirePrefab, transform.position, Quaternion.identity);
+            }
 
-    void Ignite()
-    {
-        ignited = true;
-        falling = false;
+            Destroy(gameObject);
+            return;
+        }
 
-        sr.sprite = flameSprite;
-
-        // ★ここが重要（正しいプロパティ名）
-        rb.linearVelocity = Vector2.zero;
-
-        Destroy(gameObject, lifeTime);
+        // プレイヤーなどに当たっても消える
+        Destroy(gameObject);
     }
 }
