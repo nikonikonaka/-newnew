@@ -1397,6 +1397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u77E2\u5370\u306FOverlaycameraCanvas\u5C02\u7528"
       objectReference: {fileID: 0}
+    - target: {fileID: 8635439670856695784, guid: 3fc40de602c534649b9f581e095434a8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1615,11 +1619,11 @@ PrefabInstance:
       objectReference: {fileID: 296129303}
     - target: {fileID: 1590845555732706840, guid: 2122e230985c2e749a0380db87d9a8cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3170904
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1590845555732706840, guid: 2122e230985c2e749a0380db87d9a8cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6202202
+      value: 20.69
       objectReference: {fileID: 0}
     - target: {fileID: 1590845555732706840, guid: 2122e230985c2e749a0380db87d9a8cf, type: 3}
       propertyPath: m_LocalPosition.z
