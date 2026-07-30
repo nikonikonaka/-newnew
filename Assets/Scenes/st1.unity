@@ -4974,7 +4974,7 @@ PrefabInstance:
       objectReference: {fileID: 90813281}
     - target: {fileID: 4187740738284905335, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: autoRescueOnContact
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5062932898772957064, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: m_LocalPosition.x

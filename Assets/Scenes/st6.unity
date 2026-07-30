@@ -21958,6 +21958,10 @@ PrefabInstance:
       value: "\u30B4\u30DF\u7BB1\u306B\u3057\u304B\u898B\u3048\u306A\u3044\u6D88\u706B\u6813
         (2)_0"
       objectReference: {fileID: 0}
+    - target: {fileID: 7960354942336244094, guid: 87b1a01d87cd37b4d911378ec7f3b8e9, type: 3}
+      propertyPath: supplyRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22001,11 +22005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2101535048889847314, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: waterUseSpeed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2101535048889847314, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: waterRecoverSpeed
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2504798723414336604, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: m_TagString

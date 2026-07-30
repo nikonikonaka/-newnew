@@ -17663,7 +17663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 194558806405103617, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: waterRecoverSpeed
-      value: 2.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1768873536549000923, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: m_AnchorMax.x
