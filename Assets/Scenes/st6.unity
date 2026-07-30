@@ -310,7 +310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172, y: 129}
+  m_AnchoredPosition: {x: -274, y: 219}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90813281
@@ -849,13 +849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e753cd2749db51469cad618bb6f1a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserGate2D
-  firePoint: {fileID: 198623016}
-  maxDistance: 20
-  line: {fileID: 198623015}
-  wallTag: Wall
-  segments: 10
-  jaggedness: 0.1
-  knockbackInterval: 0.3
 --- !u!212 &168227508
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -902,7 +895,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9999
+  m_SortingOrder: 3000
   m_Sprite: {fileID: 6914421396917702570, guid: e58a5bfe7909e614c852d5f60ef78292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4008,6 +4001,7 @@ GameObject:
   - component: {fileID: 643494874}
   - component: {fileID: 643494873}
   - component: {fileID: 643494872}
+  - component: {fileID: 643494875}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -4031,7 +4025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: 139}
+  m_AnchoredPosition: {x: 216, y: 212}
   m_SizeDelta: {x: 256.76, y: 50}
   m_Pivot: {x: 0.22756258, y: 0.5000002}
 --- !u!114 &643494872
@@ -4147,6 +4141,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643494869}
   m_CullTransparentMesh: 1
+--- !u!114 &643494875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643494869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fb3f239690d674c9a6f614f1b6a57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceFront2D
+  sortingOrder: 999999
 --- !u!1001 &661332831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6158,7 +6165,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 3276
   m_Sprite: {fileID: 6914421396917702570, guid: e58a5bfe7909e614c852d5f60ef78292, type: 3}
   m_Color: {r: 0.15337591, g: 0.8867924, b: 0.85848415, a: 1}
   m_FlipX: 0
@@ -9782,7 +9789,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!224 &2033236664
 RectTransform:
