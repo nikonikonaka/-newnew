@@ -29991,6 +29991,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -802490783937196455, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: rescueText
+      value: 
+      objectReference: {fileID: 90813281}
     - target: {fileID: 194558806405103617, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: maxWater
       value: 110
