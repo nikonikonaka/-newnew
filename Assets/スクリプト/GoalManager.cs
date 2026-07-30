@@ -5,25 +5,31 @@ public class GoalManager : MonoBehaviour
 {
     public RESCON rescueCon;
 
+    // ★ インスペクターで設定できる初期ステージ番号
+    public int startStage = 1;
+
+    // ★ ClearScene から参照できるグローバルステージ番号
+    public static int currentStage;
+
     private bool player1In = false;
     private bool player2In = false;
 
+    void Start()
+    {
+        // インスペクター設定を static に反映
+        currentStage = startStage;
+    }
+
     void Update()
     {
-        // 救助完了していて
         if (rescueCon.GetRemainingPeople() == 0)
         {
-            // プレイヤー2人ともゴール内
             if (player1In && player2In)
             {
-                StageData.currentStage += 1;  // ← 次のステージへ進む
+                currentStage += 1;  // 次ステージへ
                 SceneManager.LoadScene("ClearScene");
             }
         }
-    }
-    public static class StageData
-    {
-        public static int currentStage = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

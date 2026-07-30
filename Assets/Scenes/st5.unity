@@ -2031,6 +2031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalManager
   rescueCon: {fileID: 207882220830320276}
+  startStage: 5
 --- !u!1 &492136492
 GameObject:
   m_ObjectHideFlags: 0

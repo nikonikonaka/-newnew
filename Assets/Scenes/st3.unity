@@ -407,6 +407,10 @@ PrefabInstance:
       propertyPath: rescueCon
       value: 
       objectReference: {fileID: 1319921388}
+    - target: {fileID: 8217189821523819090, guid: 686ed4057b2b5214f90b491c97e6b941, type: 3}
+      propertyPath: startStage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static GoalManager;
 
 public class ClearSceneManager : MonoBehaviour
 {
     public void OnNextButton()
     {
-        string next = "st" + StageData.currentStage;
+        string next = "st" + GoalManager.currentStage;  // © C³ƒ|ƒCƒ“ƒg
         SceneManager.LoadScene(next);
     }
 }
