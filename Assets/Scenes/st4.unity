@@ -980,7 +980,6 @@ GameObject:
   - component: {fileID: 210797378}
   - component: {fileID: 210797377}
   - component: {fileID: 210797376}
-  - component: {fileID: 210797375}
   - component: {fileID: 210797374}
   m_Layer: 0
   m_Name: EDGE1_0 (3)
@@ -1007,18 +1006,6 @@ MonoBehaviour:
   isPlayer2Extinguishing: 0
   player2Timer: 0
   player2ExtinguishTime: 5
---- !u!114 &210797375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210797373}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 226f0511de4ec974ba7454878949d7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FireController
 --- !u!61 &210797376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7193,7 +7180,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!224 &2033236664
 RectTransform:
@@ -14383,6 +14370,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404365837320440357, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
+      propertyPath: sortingOrder
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 734628162361183934, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
+      propertyPath: extinguishTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1518974385966834694, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: m_Name
       value: "\u30D7\u30EC\u30A4\u30E4\u30FC1_0 a (1)"
@@ -14393,11 +14388,11 @@ PrefabInstance:
       objectReference: {fileID: 90813281}
     - target: {fileID: 5062932898772957064, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.41504
+      value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 5062932898772957064, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4734869
+      value: -2.37
       objectReference: {fileID: 0}
     - target: {fileID: 5062932898772957064, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
       propertyPath: m_LocalPosition.z

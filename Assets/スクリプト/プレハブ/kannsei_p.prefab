@@ -137,9 +137,17 @@ PrefabInstance:
       value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 4196699478961477375, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: downSprite
+      value: 
+      objectReference: {fileID: -5909296270856572403, guid: 58504118999df384d95d102dc361da4e, type: 3}
+    - target: {fileID: 4196699478961477375, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: knockbackTime
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 4196699478961477375, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: downWalkSprite
+      value: 
+      objectReference: {fileID: 2051111438250238001, guid: af8693adf4eebf24594ecc1b7d7448ee, type: 3}
     - target: {fileID: 4196699478961477375, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: knockbackForce
       value: 3
@@ -194,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5858785794226911887, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: m_Name
-      value: "\u30D7\u30EC\u30A4\u30E4\u30FC1_0 p Variant"
+      value: kannsei_p
       objectReference: {fileID: 0}
     - target: {fileID: 6948008999573819450, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: m_TagString

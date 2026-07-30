@@ -187,11 +187,11 @@ MonoBehaviour:
   knockbackForce: 10
   knockbackTime: 0.2
   upSprite: {fileID: -3416960411734898597, guid: 54bfbe3549d09a3459532934e0b39193, type: 3}
-  downSprite: {fileID: -3326467329938346619, guid: 876c8f60f7ded3f4c81a6b61a9d9fbe6, type: 3}
+  downSprite: {fileID: -4301661399212297555, guid: d9f786bbce50f084e835d235253a7f50, type: 3}
   rightSprite: {fileID: 474140600149114105, guid: d2632f0fb530d254d84f441e8101f0a1, type: 3}
   leftSprite: {fileID: -4119808776331621434, guid: 563122c5c10c7c046bf889c52a1641f0, type: 3}
   upWalkSprite: {fileID: -5404029307034403048, guid: 5b33b306d78e6df43ba812b5af7a5a98, type: 3}
-  downWalkSprite: {fileID: -1375696189021163036, guid: d4002855bb83386439f3cb5027bee9c1, type: 3}
+  downWalkSprite: {fileID: 6042871590985616043, guid: 273d3dfe484799d4783f67fb5360fd3f, type: 3}
   rightWalkSprite: {fileID: 1344792917983392657, guid: cda3807703743074c8f952d59977778e, type: 3}
   leftWalkSprite: {fileID: -8249125005189632454, guid: 22dac66d2abeb2e40ad43ed63b3e22f0, type: 3}
   extinguisherLeftSprite: {fileID: -3440932971202716707, guid: dfcf36cbda1147a4286a03f5b12547cd, type: 3}

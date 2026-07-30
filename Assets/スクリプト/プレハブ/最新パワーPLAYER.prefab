@@ -6004,11 +6004,11 @@ MonoBehaviour:
   knockbackForce: 3
   knockbackTime: 0.2
   upSprite: {fileID: -8544906439916621513, guid: 2da18f9c2cfaaa44f9149fbb176cc6a5, type: 3}
-  downSprite: {fileID: -6594073380962191338, guid: 87883c6f7fc42394a897993bc1089c74, type: 3}
+  downSprite: {fileID: -5909296270856572403, guid: 58504118999df384d95d102dc361da4e, type: 3}
   rightSprite: {fileID: 3724257746112637289, guid: e6b63846966babb47ac5be0d9792ed19, type: 3}
   leftSprite: {fileID: -336527375909007408, guid: 256029406c3b820418ef42a180e57774, type: 3}
   upWalkSprite: {fileID: -6594381343313924726, guid: 023f4012d9056db46adefcc1c182151f, type: 3}
-  downWalkSprite: {fileID: 6676870202666233833, guid: 2a4b15cd1e44fc64e94838f8efe38488, type: 3}
+  downWalkSprite: {fileID: 2051111438250238001, guid: af8693adf4eebf24594ecc1b7d7448ee, type: 3}
   rightWalkSprite: {fileID: -8736465373177798964, guid: e4fe311a2b749e14cb8f6bb44bb5e779, type: 3}
   leftWalkSprite: {fileID: 3667667128661100329, guid: b41bc8949edf6b449982d406ac451796, type: 3}
   hoseLeftSprite: {fileID: 4639625450962020426, guid: 163db7063fc59e448b8a91fd33bcdab9, type: 3}
