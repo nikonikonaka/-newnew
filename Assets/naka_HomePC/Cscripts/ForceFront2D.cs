@@ -5,7 +5,7 @@ public class ForceFront2D : MonoBehaviour
 {
     // sortingOrder（ソート順）は数値が大きいほど手前に描画される。
     // 999999 のような極端に大きい値を使うことで、ほぼ全てのスプライトより前に出せる。
-    [SerializeField] int sortingOrder = 999999;
+    [SerializeField] int sortingOrder = 9798;
 
     // SpriteRenderer コンポーネントを保持しておくための変数。
     // 毎回 GetComponent を呼ぶと処理が重くなるため、Awake で一度だけ取得してキャッシュする。
