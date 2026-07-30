@@ -387,7 +387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -159, y: 122}
+  m_AnchoredPosition: {x: -400, y: 206}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90813281
@@ -2878,7 +2878,8 @@ Transform:
   m_LocalPosition: {x: 0.58, y: -1.44, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2033236664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -3006,8 +3007,8 @@ MonoBehaviour:
   player1: {fileID: 7874914407273723936}
   player2: {fileID: 5302228334748873448}
   followSpeed: 3
-  minLimit: {x: -20, y: -20}
-  maxLimit: {x: 12, y: 20}
+  minLimit: {x: -30, y: -30}
+  maxLimit: {x: 30, y: 30}
 --- !u!114 &519420036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3648,7 +3649,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: 122}
+  m_AnchoredPosition: {x: 325, y: 211}
   m_SizeDelta: {x: 256.76, y: 50}
   m_Pivot: {x: 0.22756258, y: 0.5000002}
 --- !u!114 &643494872
@@ -8049,7 +8050,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 20000
-  m_LinearDamping: 0
+  m_LinearDamping: 2
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -10283,7 +10284,7 @@ RectTransform:
   - {fileID: 643494870}
   - {fileID: 162610537}
   - {fileID: 3545453748000653137}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23683,7 +23684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957305f50b38f7545ab58edb7f8c5c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RESCON_p
-  rescueText: {fileID: 643494873}
+  rescueText: {fileID: 90813281}
 --- !u!1 &165745163821215714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5858785794226911887, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
@@ -23970,7 +23971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010584702750269046, guid: e8da875c8cfb8ae40b6b87e6a5b8eb23, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24151,6 +24152,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -802490783937196455, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 194558806405103617, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: maxWater
       value: 110
@@ -24437,6 +24442,10 @@ PrefabInstance:
       propertyPath: rescueText
       value: 
       objectReference: {fileID: 90813281}
+    - target: {fileID: 3528040852934662457, guid: 658e34a310191f147a0c34a7532e85e5, type: 3}
+      propertyPath: autoRescueOnContact
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3935106109440189931, guid: 658e34a310191f147a0c34a7532e85e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8
@@ -24528,7 +24537,6 @@ SceneRoots:
   - {fileID: 1214570162}
   - {fileID: 492136496}
   - {fileID: 679972710}
-  - {fileID: 2033236664}
   - {fileID: 439060326}
   - {fileID: 995922368}
   - {fileID: 914430462}

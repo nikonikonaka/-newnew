@@ -209,6 +209,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RESCON
   rescueText: {fileID: 0}
+  autoRescueOnContact: 1
+  useRangeRescue: 1
+  rescueRadius: 1.2
 --- !u!114 &734628162361183934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::P2Handle
   extinguishRadius: 1.2
-  extinguishTime: 3
+  extinguishTime: 1
 --- !u!114 &3999283384224018000
 MonoBehaviour:
   m_ObjectHideFlags: 0

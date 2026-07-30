@@ -5902,6 +5902,7 @@ GameObject:
   - component: {fileID: 194558806405103617}
   - component: {fileID: 2912171178954306186}
   - component: {fileID: 2101535048889847314}
+  - component: {fileID: -802490783937196455}
   m_Layer: 0
   m_Name: "\u6700\u65B0\u30D1\u30EF\u30FCPLAYER"
   m_TagString: Player1
@@ -6235,6 +6236,19 @@ MonoBehaviour:
   waterUseSpeed: 20
   waterRecoverSpeed: 1
   waterSlider: {fileID: 2523805406949644617}
+--- !u!114 &-802490783937196455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858785794226911887}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957305f50b38f7545ab58edb7f8c5c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RESCON_p
+  rescueText: {fileID: 0}
 --- !u!1 &6145539757341972757
 GameObject:
   m_ObjectHideFlags: 0

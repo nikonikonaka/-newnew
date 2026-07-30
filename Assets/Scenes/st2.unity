@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda9a7028b4fa4f45b9296bffa04413d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
-  timeLimit: 80
+  timeLimit: 100
   timerText: {fileID: 86312970}
 --- !u!114 &86312970
 MonoBehaviour:
@@ -2486,6 +2486,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7866210092843888902, guid: 46cd922dad29e784cab09273cff256b8, type: 3}
+      propertyPath: rescueText
+      value: 
+      objectReference: {fileID: 464827985}
     - target: {fileID: 1640873643372388878, guid: 672432678432b434cacf90cb17d158ca, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

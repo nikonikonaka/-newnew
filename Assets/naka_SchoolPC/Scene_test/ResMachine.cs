@@ -85,18 +85,6 @@ public class RescueUnlockMachine : MonoBehaviour
         // RESCON_p設定確認
         // --------------------------------------
 
-        if (rescon_p != null)
-        {
-            Debug.Log(
-                "RESCON_pが設定されています"
-            );
-        }
-        else
-        {
-            Debug.LogError(
-                "RESCON_pが設定されていません！"
-            );
-        }
 
         // --------------------------------------
         // SearchRes設定確認

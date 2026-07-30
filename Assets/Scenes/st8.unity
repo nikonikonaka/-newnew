@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -154, y: 138}
+  m_AnchoredPosition: {x: -262, y: 198}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90813281
@@ -2515,8 +2515,8 @@ MonoBehaviour:
   player1: {fileID: 106374050143945184}
   player2: {fileID: 3272592829740398607}
   followSpeed: 3
-  minLimit: {x: -40, y: -40}
-  maxLimit: {x: 30, y: 30}
+  minLimit: {x: -90, y: -90}
+  maxLimit: {x: 90, y: 90}
 --- !u!114 &519420036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,7 +2947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96, y: 140}
+  m_AnchoredPosition: {x: 182, y: 193}
   m_SizeDelta: {x: 256.76, y: 50}
   m_Pivot: {x: 0.22756258, y: 0.5000002}
 --- !u!114 &643494872
@@ -3656,6 +3656,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
+--- !u!1 &790580397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3885106004638833426, guid: e1f966ffbede83f4fb84c06ba80cba81, type: 3}
+  m_PrefabInstance: {fileID: 790580396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &909059163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3749,6 +3754,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7253058f971713488835fadea14907a, type: 3}
+--- !u!1 &909059164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4558631167417368280, guid: e7253058f971713488835fadea14907a, type: 3}
+  m_PrefabInstance: {fileID: 909059163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &914430460
 GameObject:
   m_ObjectHideFlags: 0
@@ -33307,12 +33317,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287567248}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 957305f50b38f7545ab58edb7f8c5c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RESCON_p
-  rescueText: {fileID: 0}
+  rescueText: {fileID: 90813281}
 --- !u!114 &207882220830320276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4187740738284905335, guid: 576b0871b5d121548bd2f6c98fce301a, type: 3}
@@ -33714,6 +33724,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -802490783937196455, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 194558806405103617, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: maxWater
       value: 100
@@ -33879,9 +33893,17 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5604683350276842179, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: holes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604683350276842179, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: 'holes.Array.data[0]'
       value: 
       objectReference: {fileID: 1126934104}
+    - target: {fileID: 5604683350276842179, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
+      propertyPath: 'holes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 909059164}
     - target: {fileID: 5604683350276842179, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: pickupLadders.Array.size
       value: 2
@@ -33893,7 +33915,7 @@ PrefabInstance:
     - target: {fileID: 5604683350276842179, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: 'pickupLadders.Array.data[1]'
       value: 
-      objectReference: {fileID: 1096401919}
+      objectReference: {fileID: 790580397}
     - target: {fileID: 5723089084246499489, guid: 20bbde747d602e44a918ff2511f991f5, type: 3}
       propertyPath: m_Camera
       value: 
